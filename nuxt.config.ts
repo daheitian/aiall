@@ -2,7 +2,12 @@
 import { defineNuxtConfig } from "nuxt/config";
 import { i18n } from "./config/i18n";
 import { pwa } from "./config/pwa";
-
+export default {
+  env: {
+    NUXT_AUTH_ORIGIN: process.env.NUXT_AUTH_ORIGIN || 'http://localhost:3000'
+  },
+  // 其他配置选项...
+}
 export default defineNuxtConfig({
   app: {
     head: {
